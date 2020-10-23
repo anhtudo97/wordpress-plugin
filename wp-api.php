@@ -6,14 +6,13 @@
  * Description: Custom api to change paypal information
  * Version: 1.0
  * Author: Anh Tu Do
- * Author URI: http://watch-learn.com
+ * Author URI: https://github.com/anhtudo97
  */
 
 function wp_api_paypal($request){
 	$arr_request = json_decode( $request->get_body() );
     $key_access = $arr_request->key_access;
 	
-
     // get paypal setting from woo plugin gateway
     $paypal_settings = get_option( 'woocommerce_paypal_settings' );
 
